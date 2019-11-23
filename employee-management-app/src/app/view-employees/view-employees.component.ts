@@ -8,13 +8,16 @@ import { EmployeemgtService } from '../employeemgt.service';
 })
 export class ViewEmployeesComponent implements OnInit {
 
-  employees:any;
-  constructor(private service:EmployeemgtService) { }
+  employees: any;
+  constructor(private service: EmployeemgtService) { }
 
   ngOnInit() {
 
     let resp = this.service.getAllEmployees();
-    resp.subscribe((data)=>this.employees=data);
+    resp.subscribe((data) => this.employees = data);
+    console.log(this.employees);
+    debugger;
+    
   }
 
 }

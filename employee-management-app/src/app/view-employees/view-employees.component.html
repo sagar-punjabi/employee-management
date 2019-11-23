@@ -15,11 +15,11 @@
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
             <td>{{employee.gender}}</td>
-            <td>{{employee.dob}}</td>
+            <td>{{employee.dob | date:'dd-MMM-yyyy'}}</td>
             <td>{{employee.department}}</td>
-          </tr>
+        </tr>
     </tbody>
-    </table>
-    <ng-template #noemployees>
-        <p>No employees to show</p>
-    </ng-template>
+</table>
+<ng-template #noemployees>
+    <p>No employees to show</p>
+</ng-template>
