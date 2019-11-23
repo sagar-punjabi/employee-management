@@ -24,7 +24,7 @@ public class Employee {
 	
 	private String department;
 
-	
+	public Employee() {}
 	
 	public Employee(long id, String firstName, String lastName, String gender, Date dob, String department) {
 		super();
