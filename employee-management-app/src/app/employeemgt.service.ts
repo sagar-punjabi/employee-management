@@ -13,4 +13,9 @@ export class EmployeemgtService {
   {
     return this.http.post("http://localhost:8081/create",employee);
   }
+
+  public getAllEmployees ()
+  {
+    return this.http.get("http://localhost:8081/employees");
+  }
 }
