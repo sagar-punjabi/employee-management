@@ -1,0 +1,5 @@
+package com.sg.employeemgt.model;
+
+public class Employee {
+
+}
