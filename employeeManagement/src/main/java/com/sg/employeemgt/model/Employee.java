@@ -24,6 +24,18 @@ public class Employee {
 	
 	private String department;
 
+	
+	
+	public Employee(long id, String firstName, String lastName, String gender, Date dob, String department) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		Gender = gender;
+		this.dob = dob;
+		this.department = department;
+	}
+
 	public long getId() {
 		return id;
 	}
