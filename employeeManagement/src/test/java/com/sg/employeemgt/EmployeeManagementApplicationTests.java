@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.sg.employeemgt.model.Employee;
@@ -28,7 +29,7 @@ class EmployeeManagementApplicationTests {
 
 	@Test
 	public void getAllEmployeesTest() {
-		when(repository.findAll()).thenReturn(Stream.of(new Employee(1L,"Steven","Edison","M",new Date(),"Sales"),new Employee(1L,"Elezabeth","Thomas","F",new Date(),"Human Resource")).collect(Collectors.toList()));
+		when(repository.findAll(Sort.by(Sort.Direction.ASC,"firstName"))).thenReturn(Stream.of(new Employee(1L,"Aaron","Edison","M",new Date(),"Sales"),new Employee(1L,"Elezabeth","Thomas","F",new Date(),"Human Resource")).collect(Collectors.toList()));
 		assertEquals(2,service.getAllEmployees().size());
 	}
 	
@@ -39,4 +40,6 @@ class EmployeeManagementApplicationTests {
 		assertEquals(emp,service.saveOrUpload(emp));
 	}
 
+
+	
 }
