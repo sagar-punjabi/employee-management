@@ -1,3 +1,57 @@
 input {
     margin: 8px 0;
   }
+/* 
+  #ui {
+    text-align: center;
+    background-color:#333;
+    color:#FFF;
+    border-radius: 3%;
+    opacity: 0.6;
+}
+ */
+form input,select {
+
+width: 100%;
+max-width: 425px;
+
+/* Fix for Safari/iOS date fields */
+min-height: calc(0.9em + (0.2em * 2) + 0.6em);
+
+padding: 0.8em;
+font-size: 0.9em;
+font-family: "Source Sans Pro", sans-serif;
+
+outline: none;
+border: 1px solid #dddddd;
+border-radius: 4px;
+background: #f9f9f9;
+transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+form input:focus {
+background: #ffffff;
+border: 1px solid #1976d2;
+}
+
+form input::placeholder {
+color: #bbbbbb;
+}
+form button {
+font-family: "Source Sans Pro", sans-serif;
+font-weight: 600;
+font-size: 1.1em;
+padding: 10px 16px;
+margin: 10px 0;
+
+color: #ffffff;
+background: #1976d2;
+border: 2px solid #1976d2;
+border-radius: 5px;
+
+cursor: pointer;
+outline: none;
+}
+
+form button:active {
+background: #0fa942;
+}  
