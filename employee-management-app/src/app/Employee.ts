@@ -4,6 +4,7 @@ export class Employee{
         lastName : string,
         gender : string,
         dob : any,
-        department : string
+        department : string,
+        id? : Number
     ){}
 }
