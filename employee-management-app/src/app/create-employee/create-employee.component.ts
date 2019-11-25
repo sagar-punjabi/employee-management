@@ -10,22 +10,34 @@ import { EmployeemgtService } from '../employeemgt.service';
 })
 export class CreateEmployeeComponent implements OnInit {
   
+  employee :  Employee = {
+    firstName : "",
+    lastName : "",
+    gender : "M",
+    dob : "",
+    department : ""
+  }; 
   
-  employee = new Employee("","","","","");
-  emptyEmployee = new Employee("","","","","");
+  emptyEmployee : Employee = {
+    firstName : "",
+    lastName : "",
+    gender : "M",
+    dob : "",
+    department : ""
+  };
 
+  
 
   constructor(private service : EmployeemgtService) { }
 
   public OnCreateEmp ()
   {
-    console.log(this.employee);
-    debugger;
     let resp = this.service.createEmployee(this.employee);
     resp.subscribe((data)=> this.employee = this.emptyEmployee);
   }
 
   ngOnInit() {
+
   }
 
 }

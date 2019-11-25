@@ -1,10 +1,8 @@
-export class Employee{
-    constructor(
-        firstName : string,
-        lastName : string,
-        gender : string,
-        dob : any,
-        department : string,
-        id? : Number
-    ){}
+export interface Employee {
+    firstName: string,
+    lastName: string,
+    gender: 'M' | 'F' | 'O',
+    dob: string | Date,
+    department: string,
+    id?: Number
 }
