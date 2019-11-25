@@ -57,7 +57,7 @@ describe('EmployeemgtService', () => {
   });
 
   it('Should create a new Employee via the API using POST',()=>{
-    const dummyEmployee : Employee = [
+    const dummyEmployee : Employee = 
       {
           "id": 1,
           "firstName": "ASD",
@@ -66,7 +66,7 @@ describe('EmployeemgtService', () => {
           "department": "Marketing",
           "gender": "F"
       }
-    ];
+    ;
     const service: EmployeemgtService = TestBed.get(EmployeemgtService);
     const httpMock = TestBed.get(HttpTestingController);
     expect(service.createEmployee).toBeTruthy();

@@ -1,21 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Employee } from './Employee';
-import { HttpClient } from '@angular/common/http';
+import { RestService } from './rest.service';
+
+enum employeeApiUrls {
+  createEmployee = '/create',
+  getAllEmployees = '/employees'
+}
 
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeemgtService {
 
-  constructor(private http : HttpClient) { }
+export class EmployeemgtService extends RestService {
 
-  public createEmployee (employee : Employee)
-  {
-    return this.http.post("http://localhost:8081/create",employee);
+
+  public createEmployee(employee: Employee) {
+
+    return this.post(employeeApiUrls.createEmployee, employee);
+  
   }
 
-  public getAllEmployees ()
-  {
-    return this.http.get("http://localhost:8081/employees");
+  public getAllEmployees() {
+
+    return this.get(employeeApiUrls.getAllEmployees);
+  
   }
+
 }
