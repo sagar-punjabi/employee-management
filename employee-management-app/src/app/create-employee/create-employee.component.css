@@ -32,7 +32,10 @@ form input:focus {
 background: #ffffff;
 border: 1px solid #1976d2;
 }
-
+form select:focus {
+  background: #ffffff;
+  border: 1px solid #1976d2;
+  }
 form input::placeholder {
 color: #bbbbbb;
 }

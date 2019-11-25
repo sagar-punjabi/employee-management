@@ -14,7 +14,11 @@
             <td>{{employee.id}}</td>
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
-            <td>{{employee.gender}}</td>
+            <td [ngSwitch]="employee.gender">
+                <span *ngSwitchCase="'M'">Male</span>
+                <span *ngSwitchCase="'F'">Female</span>
+                <span *ngSwitchCase="'O'">Others</span>
+            </td>
             <td>{{employee.dob | date:'dd-MMM-yyyy'}}</td>
             <td>{{employee.department}}</td>
         </tr>
